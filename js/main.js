@@ -18,10 +18,7 @@ let products = "";
           <button onclick="addBroductToLocal(${product.id})"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
         `;
-      if (product.id <= 6){
-        productsHtml.innerHTML += content;
-      }
-
+      product.id <= 6 ? (productsHtml.innerHTML += content) : "";
     }
   });
 })();
