@@ -17,7 +17,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -42,10 +42,24 @@
             <a class="nav-link" href="#">contact</a>
           </li>
           <li class="nav-icon">
-            <a class="nav-link" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a onclick="shwoCart()" class="nav-link">
+              <i class="fa-solid fa-bag-shopping">
+                <div class="product-count">
+                  <p></p>
+                </div>
+              </i>
+            </a>
+            <div id="home-cart" class="home-cart">
+              <div class="cart-container">
+
+              </div>
+              <a class="cart-btn" href="./cart-sopping.html">view all products</a>
+            </div>
           </li>
         </ul>
       </div>
+
+    </div>
     </div>
   </nav>
   <section class="landing">
@@ -53,29 +67,89 @@
       <div class="row">
         <div class="landing-container">
           <div class="col-lg-6 landing-text">
-          <p>
-            Trade-in-offer
-          </p>
-          <h2>
-            super value deals
-          </h2>
-          <h2>
-            On all products
-          </h2>
-          <p>
-            save more with coupons
-          </p>
-          <a href="">Shop Now</a>
-        </div>
-        <div class="col-lg-6 landing-image">
-          <img src="./imges/8247029_3843753.jpg" alt="landing-image">
+            <p class="fs-5">
+              Trade-in-offer
+            </p>
+            <h2>
+              super value deals
+            </h2>
+            <h2>
+              <span>
+                On all products
+              </span>
+            </h2>
+            <p class="fs-6 fw-light pb-4">
+              save more with coupons & up to 70% offer!
+            </p>
+            <a href="">Shop Now</a>
+          </div>
+          <div class="col-lg-6 landing-image">
+            <img src="./imges/landing-img.png" alt="landing-image">
+          </div>
         </div>
       </div>
-        </div>
-        
     </div>
   </section>
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="feature col-lg-2">
+          <img src="./imges/features/1.png" alt="">
+          <p>
+            free shipping
+          </p>
+        </div>
+        <div class="feature col-lg-2">
+          <img src="./imges/features/2.png" alt="">
+          <p style="background-color: #519f9d;">
+            online order
+          </p>
+        </div>
+        <div class="feature col-lg-2">
+          <img src="./imges/features/3.png" alt="">
+          <p>
+            save money
+          </p>
+        </div>
+        <div class="feature col-lg-2">
+          <img src="./imges/features/4.png" alt="">
+          <p style="background-color: #519f9d;">
+            promotions
+          </p>
+        </div>
+        <div class="feature col-lg-2">
+          <img src="./imges/features/5.png" alt="">
+          <p>
+            happy sale
+          </p>
+        </div>
+        <div class="feature col-lg-2">
+          <img src="./imges/features/6.png" alt="">
+          <p style="background-color: #088178;">
+            24 support
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <div class="row">
+        <div class="products-text">
+          <h3> featured products</h3>
+          <p>The first collection</p>
+        </div>
+      </div>
+
+      <div id="products-html" class="row">
+
+      </div>
+    </div>
+  </section>
+  <script src="./js/axios.js"></script>
   <script src="./js/bootstrap.js"></script>
+  <script src="./js/cart.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/wow.min.js"></script>
   <script>
