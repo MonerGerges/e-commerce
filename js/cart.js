@@ -5,6 +5,7 @@ function remove(id) {
     setUpCartUi(filterdItems);
     localStorage.setItem("productToCart", JSON.stringify(filterdItems));
   }
+  setUpEmpty();
   getCount();
   addCartUi();
 }
@@ -42,5 +43,18 @@ function shwoCart() {
     homeCart.classList.toggle("home-cart-actve");
   }
 }
+
+function setUpEmpty() {
+  let productHtml = document.getElementById("products-html");
+  if (productHtml.innerHTML === "") {
+    let empty = document.getElementById("empty");
+    let content = `
+      <h5> the cart shopping is empty  </h5>
+      <a href="">Shop Now</a>
+    `;
+    empty.innerHTML = content;
+  }
+}
+setUpEmpty();
 getCount();
 addCartUi();

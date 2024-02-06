@@ -338,3 +338,26 @@
 .product>button:hover {
   background-color: var(--bg-color);
 }
+
+.empty{
+  display: flex;
+  margin-top: 10%;
+  align-items: center;
+  flex-direction: column;
+}
+.empty h5{
+  font-size: 3vw;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.empty a{
+  text-decoration: none;
+  background-image: url(../imges/button.png);
+  background-color: transparent;
+  background-size: contain;
+  padding: 14px 80px 14px 70px;
+  color: var(--f--color);
+  font-size: 15px;
+  font-weight: 600;
+}

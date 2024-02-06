@@ -26,3 +26,4 @@ function setUpCartUi(items) {
 
   productsHtml.innerHTML = productsUi;
 }
+
