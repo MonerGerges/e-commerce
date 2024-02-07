@@ -64,27 +64,61 @@
         </div>
     </nav>
 
-    <section class="products">
+    <section class="product-details">
         <div class="container">
             <div class="row">
-                <div class="products-text">
-                    <h3> cart shopping </h3>
+                <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">shop</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
+            </div>
+            <div id="product-details" class="row">
+                <div class="col-lg-6 product-imges">
+                    <div class="imges">
+                        <div class="product-img-container">
+                            <img src="./imges/products/1.png" alt="imge">
+                        </div>
+                        <div class="product-img-container">
+                            <img src="./imges/products/1.png" alt="imge">
+                        </div>
+                        <div class="product-img-container">
+                            <img src="./imges/products/1.png" alt="imge">
+                        </div>
+                        <div class="product-img-container">
+                            <img src="./imges/products/1.png" alt="imge">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="./imges/products/1.png" alt="imge">
+                    </div>
                 </div>
-            </div>
-
-            <div id="products-html" class="row">
-            
-            </div>
-
-            <div id="empty" class="empty">
-                
+                <div class="col-lg-6 product-body">
+                    <div class="product-details">
+                        <h5>i phone</h5>
+                        <h6>apple</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, libero?</p>
+                    </div>
+                    <div class="s-and-r">
+                        <div class="s">
+                            <p>$200 <span>-$16</span></p>
+                        </div>
+                        <div class="r">
+                            <i class="fa-solid fa-star"></i>
+                            <p>4.8 <span>rating</span></p>
+                        </div>
+                    </div>
+                    <div class="product-stock">
+                        <h6><span>96</span>in stock</h6>
+                    </div>
+                </div>
             </div>
     </section>
 
     <script src="./js/axios.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/cart.js"></script>
-    <script src="./js/cart-shopping.js"></script>
+    <script src="./js/product-details.js"></script>
     <script src="./js/wow.min.js"></script>
     <script>
         new WOW().init();

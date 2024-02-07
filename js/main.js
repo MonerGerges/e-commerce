@@ -7,14 +7,16 @@ let products = "";
     for (product of products) {
       let content = `
         <div id="prodct-${product.id}" class="product col-lg-4">
-          <div class="product-img">
+        <a onclick="productUI(${product.id})">
+        <div class="product-img">
             <img src=${product.thumbnail}>
           </div>
           <div class="product-text">
             <span> ${product.title} </span>
             <p>${product.description}</p>
             <h3>${product.price}$</h3>
-          </div>
+            </div>
+            </a>
           <button onclick="addBroductToLocal(${product.id})"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
         `;
@@ -30,6 +32,8 @@ function addBroductToLocal(id) {
   let choose = products.find((ele) => ele.id === id);
   addProduct = [...addProduct, choose];
   localStorage.setItem("productToCart", JSON.stringify(addProduct));
+  let homeCart = document.getElementById("home-cart");
+  homeCart.classList.add("home-cart-actve")
   getProductCount();
   setUpCartUi();
 }
@@ -66,6 +70,11 @@ function setUpCartUi() {
     `;
     homeCart.innerHTML += productsUi;
   }
+}
+
+function productUI(id) {
+  localStorage.setItem("productId", id)
+  window.location = "../product.html"
 }
 
 getProductCount();
